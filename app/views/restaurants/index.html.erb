@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Articles</h1>
+<ul class="list-groupe">
+<% @restaurants.each do |restaurant| %>
+<li class="list-group-item"><h2><%= restaurant.name %></h2>
+<p><%= restaurant.address %></p>
+<p><%= restaurant.phone_number %></p>
+<p><%= restaurant.category %></p>
+<%= link_to 'Show restaurant', restaurant_path(restaurant) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'New restaurant', new_restaurant_path(@restaurant) %>
+<div>
